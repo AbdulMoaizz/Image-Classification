@@ -1,7 +1,22 @@
 import os
 import cv2
 import numpy as np
+import pandas as pd
 import pywt
+import joblib
+import seaborn as sn
+from matplotlib import pyplot as plt
+from sklearn.svm import SVC
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import classification_report
+from sklearn import svm
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import make_pipeline
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import confusion_matrix
 
 """# getting test img
 img = cv2.imread('Test Img\\jhon ciena.jpg')
@@ -144,4 +159,67 @@ for celebrity_name, training_files in celebrity_file_names_dict.items():
         y.append(class_dict[celebrity_name])
 
 X = np.array(X).reshape(len(X),4096).astype(float)
-print(X[0])
+
+# Model Training using SVM
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+
+pipe = Pipeline([('scaler', StandardScaler()), ('svc', SVC(kernel = 'rbf', C = 10))])
+pipe.fit(X_train, y_train)
+pipe.score(X_test, y_test)
+# print(classification_report(y_test, pipe.predict(X_test)))
+
+model_params = {
+    'svm': {
+        'model': svm.SVC(gamma='auto',probability=True),
+        'params' : {
+            'svc__C': [1,10,100,1000],
+            'svc__kernel': ['rbf','linear']
+        }
+    },
+    'random_forest': {
+        'model': RandomForestClassifier(),
+        'params' : {
+            'randomforestclassifier__n_estimators': [1,5,10]
+        }
+    },
+    'logistic_regression' : {
+        'model': LogisticRegression(solver='liblinear',multi_class='auto'),
+        'params': {
+            'logisticregression__C': [1,5,10]
+        }
+    }
+}
+
+scores = []
+best_estimators = {}
+
+for algo, mp in model_params.items():
+    pipe = make_pipeline(StandardScaler(), mp['model'])
+    clf = GridSearchCV(pipe, mp['params'], cv=5, return_train_score=False)
+    clf.fit(X_train, y_train)
+    scores.append({
+        'model': algo,
+        'best_score': clf.best_score_,
+        'best_params': clf.best_params_
+    })
+    best_estimators[algo] = clf.best_estimator_
+
+df = pd.DataFrame(scores, columns=['model', 'best_score', 'best_params'])
+# Set display options
+"""pd.set_option('display.max_columns', None)
+pd.set_option('display.expand_frame_repr', False)
+pd.set_option('display.max_rows', None)
+print(df)"""
+
+# Save my best classifier algorithm
+best_clf = best_estimators['svm']
+
+# Confusion matrix
+"""cm = confusion_matrix(y_test, best_clf.predict(X_test))
+plt.figure(figsize = (10,7))
+sn.heatmap(cm, annot=True)
+plt.xlabel('Predicted')
+plt.ylabel('Truth')
+plt.show()"""
+
+joblib.dump(best_clf, 'saved_model.pkl')
