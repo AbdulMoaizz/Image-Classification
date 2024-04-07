@@ -26,9 +26,11 @@ def classify_image(image_base64_data, file_path=None):
         len_image_array = 32*32*3 + 32*32
 
         final = combined_img.reshape(1,len_image_array).astype(float)
-        result.append(
-            class_number_to_name(__model.predict(final)[0])
-        )
+        result.append({
+            'class': class_number_to_name(__model.predict(final)[0]),
+            'class_probability': np.around(__model.predict_proba(final) * 100, 2).tolist()[0],
+            'class_dictionary': __class_name_to_number
+        })
 
         return result
 
@@ -84,3 +86,9 @@ if __name__ == "__main__":
     load_saved_artifacts()
 
     print(classify_image(get_b64_test_image_for_virat(), None))
+
+    """print(classify_image(None, "./test_images/virat1.jpg"))
+    print(classify_image(None, "./test_images/virat2.jpg"))
+    print(classify_image(None, "./test_images/serena1.jpg"))
+    print(classify_image(None, "./test_images/virat3.jpg"))
+    print(classify_image(None, "./test_images/serena2.jpg"))"""
