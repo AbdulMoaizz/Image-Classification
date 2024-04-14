@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aea0d5cc-7ea6-405b-9616-d965c68c20a0" name="Changes" comment="" />
+    <list default="true" id="aea0d5cc-7ea6-405b-9616-d965c68c20a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/download (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/download (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/download (3).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/download.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (3).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (4).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (5).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (6).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (7).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (8).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images (9).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/dataset/raw/Babar_Azam/images.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Image Classification.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Image Classification.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/UI/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/UI/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/artifacts/class_dictionary.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/artifacts/class_dictionary.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/artifacts/saved_model.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/server/artifacts/saved_model.pkl" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,30 +59,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.app.html.executor": "Run",
-    "Node.js.app.js.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.app.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Moaiz Mughal\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Moaiz Mughal\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Moaiz Mughal\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Moaiz Mughal\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Moaiz Mughal\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Moaiz Mughal\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.app.html">
     <configuration name="app.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/Image Classification/UI/app.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -72,8 +93,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.app.js" />
         <item itemvalue="JavaScript Debug.app.html" />
+        <item itemvalue="Node.js.app.js" />
         <item itemvalue="JavaScript Debug.app.html" />
         <item itemvalue="Node.js.app.js" />
       </list>
@@ -89,6 +110,9 @@
       <updated>1712488999385</updated>
       <workItem from="1712489005806" duration="271000" />
       <workItem from="1712489362092" duration="2796000" />
+      <workItem from="1713092064463" duration="227000" />
+      <workItem from="1713092704947" duration="1416000" />
+      <workItem from="1713094646146" duration="3635000" />
     </task>
     <task id="LOCAL-00001" summary="UI added">
       <option name="closed" value="true" />
