@@ -19,31 +19,6 @@ from sklearn.pipeline import make_pipeline
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import confusion_matrix
 
-"""# getting test img
-img = cv2.imread('Test Img\\jhon ciena.jpg')
-print(img.shape)
-# gray img
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-# getting face of test img
-faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-(x, y, w, h) = faces[0]
-face_img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-plt.imshow(face_img)
-plt.axis('off')
-plt.show()
-
-# getting face area with 2 eyes
-cv2.destroyAllWindows()
-for (x, y, w, h) in faces:
-    face_img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-    roi_gray = gray[y:y + h, x:x + w]
-    roi_color = face_img[y:y + h, x:x + w]
-    eyes = eye_cascade.detectMultiScale(roi_gray)
-    for (ex, ey, ew, eh) in eyes:
-        cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
-"""
-
 # getting face and eyes
 face_cascade = cv2.CascadeClassifier('D:\\Uni\\Image Classification\\opencv\\haarcascades'
                                      '\\haarcascade_frontalface_default.xml')
@@ -67,9 +42,6 @@ def get_cropped_image_if_2_eyes(image_path):
         if len(eyes) >= 2:
             return roi_color
     return None
-
-
-cropped_image = get_cropped_image_if_2_eyes('Test Img\\sharapova1.jpg')
 
 # storing path of data set
 path_to_data = "./dataset/raw/"
