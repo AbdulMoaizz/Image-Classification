@@ -81,14 +81,7 @@ def get_b64_test_image_for_virat():
     with open("b64.txt") as f:
         return f.read()
 
-
 if __name__ == "__main__":
     load_saved_artifacts()
 
     print(classify_image(get_b64_test_image_for_virat(), None))
-
-    """print(classify_image(None, "./test_images/virat1.jpg"))
-    print(classify_image(None, "./test_images/virat2.jpg"))
-    print(classify_image(None, "./test_images/serena1.jpg"))
-    print(classify_image(None, "./test_images/virat3.jpg"))
-    print(classify_image(None, "./test_images/serena2.jpg"))"""
