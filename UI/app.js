@@ -31,26 +31,24 @@ function init() {
                     class: "viral_kohli",
                     class_probability: [1.05,20.20, 12.67, 22.00, 4.5, 13.22 ,91.56],
                     class_dictionary: {
-                        babr_azam:0,
-                        lionel_messi: 1,
-                        maria_sharapova: 2,
-                        roger_federer: 3,
-                        serena_williams: 4,
-                        shahid_afridi: 5,
-                        virat_kohli: 6
+                        lionel_messi: 0,
+                        maria_sharapova: 1,
+                        roger_federer: 2,
+                        serena_williams: 3,
+                        shahid_afridi: 4,
+                        virat_kohli: 5
                     }
                 },
                 {
                     class: "roder_federer",
-                    class_probability: [7.02,10.10, 23.7, 52.00, 10.1, 6.1, 1.62],
+                    class_probability: [10.10, 23.7, 52.00, 10.1, 6.1, 1.62],
                     class_dictionary: {
-                        babr_azam:0,
-                        lionel_messi: 1,
-                        maria_sharapova: 2,
-                        roger_federer: 3,
-                        serena_williams: 4,
-                        shahid_afridi: 5,
-                        virat_kohli: 6
+                        lionel_messi: 0,
+                        maria_sharapova: 1,
+                        roger_federer: 2,
+                        serena_williams: 3,
+                        shahid_afridi: 4,
+                        virat_kohli: 5
                     }
                 }
             ]
@@ -62,7 +60,7 @@ function init() {
                 $("#error").show();
                 return;
             }
-            let players = ["babar_azam","lionel_messi", "maria_sharapova", "roger_federer", "serena_williams","shahid_afridi", "virat_kohli"];
+            let players = ["lionel_messi", "maria_sharapova", "roger_federer", "serena_williams","shahid_afridi", "virat_kohli"];
 
             let match = null;
             let bestScore = -1;

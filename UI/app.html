@@ -17,17 +17,6 @@
 
     <div class="container-fluid pl-5 pr-5">
         <div class="row">
-            <div class="col card-wrapper" data-player="babar_azam">
-                <div class="card border-0">
-                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
-                        <img class="w-100 h-100" src="./images/babar.jpeg" alt="Card image cap">
-                    </div>
-                    <div class="card-body text-center p-0 pt-3">
-                        <h4 class="text-uppercase card-title">Babar Azam</h4>
-                        </p>
-                    </div>
-                </div>
-            </div>
             <div class="col card-wrapper" data-player="lionel_messi">
                 <div class="card border-0">
                     <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
@@ -100,25 +89,22 @@
 
         </div>
 
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="row">
-                    <div class="col-12 mx-auto">
-                        <form action="/file-upload" class="dropzone" id="dropzone">
-                            <div class="dz-message needsclick">
-                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
-                                <span class="note needsclick">Drop files here or click to upload</span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-3 mx-auto">
+        <div class="row justify-content-center mb-5">
+            <div class="col-sm-4 d-flex justify-content-center align-items-center">
+                <div class="col-12 mx-auto">
+                    <form action="/file-upload" class="dropzone" id="dropzone">
+                        <div class="dz-message needsclick">
+                            <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                            <span class="note needsclick">Drop files here or click to upload</span>
+                        </div>
+                    </form>
+                    <div class="col-3 mx-auto mt-2">
                         <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="row mt-5 mb-5 justify-content-center">
             <div class="col-sm-8 error" id="error" >
                 <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>
             </div>
@@ -130,10 +116,6 @@
                         <tr>
                             <th>Player</th>
                             <th>Probability Score</th>
-                        </tr>
-                        <tr>
-                            <td>Babar Azam</td>
-                            <td id="score_babar_azam"></td>
                         </tr>
                         <tr>
                             <td>Lionel Messi</td>
