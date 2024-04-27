@@ -179,10 +179,10 @@ for algo, mp in model_params.items():
 
 df = pd.DataFrame(scores, columns=['model', 'best_score', 'best_params'])
 # Set display options
-"""pd.set_option('display.max_columns', None)
+pd.set_option('display.max_columns', None)
 pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_rows', None)
-print(df)"""
+#print(df)
 
 directory = "D:/Uni/Image Classification/server/artifacts"
 os.makedirs(directory, exist_ok=True)
@@ -198,10 +198,13 @@ with open(file_path, "w") as f:
     json.dump(class_dict, f)
 
 # Confusion matrix
-"""cm = confusion_matrix(y_test, best_clf.predict(X_test))
+cm = confusion_matrix(y_test, best_clf.predict(X_test))
 plt.figure(figsize = (10,7))
 sn.heatmap(cm, annot=True)
 plt.xlabel('Predicted')
 plt.ylabel('Truth')
-plt.show()"""
+plt.show()
+
+cr = classification_report(y_test, best_clf.predict(X_test))
+print(cr)
 
